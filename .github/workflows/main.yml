@@ -14,7 +14,7 @@ jobs:
     - name: Setup and Run
       shell: powershell
       run: |
-        & "${Env:PROGRAMFILES(X86)}\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" --code="ВСТАВЬ_НОВЫЙ_КОД_ТУТ" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$Env:COMPUTERNAME --pin=123456
+        & "${Env:PROGRAMFILES(X86)}\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" --code="4/0ASc3gC0utwdL7IMpCl0HAhY6a7NwVqJjm8ZKiDi825Ry1SK3EE8Lg20ZdhSyvApSszkStw" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$Env:COMPUTERNAME --pin=123456
         
     - name: Keep Alive
       run: |
