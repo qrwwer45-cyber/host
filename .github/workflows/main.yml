@@ -14,9 +14,10 @@ jobs:
     - name: Setup and Run
       shell: powershell
       run: |
-        & "${Env:PROGRAMFILES(X86)}\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" --code="4/0ASc3gC0utwdL7IMpCl0HAhY6a7NwVqJjm8ZKiDi825Ry1SK3EE8Lg20ZdhSyvApSszkStw" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$Env:COMPUTERNAME
+        & "${Env:PROGRAMFILES(X86)}\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" --code="ВСТАВЬ_НОВЫЙ_КОД_ТУТ" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$Env:COMPUTERNAME --pin=123456
         
     - name: Keep Alive
       run: |
-        Write-Host "RDP запущен. Теперь переходи на remotedesktop.google.com/access"
-        Start-Sleep -Seconds 21600
+        Write-Host "RDP запущен. Ваш PIN: 123456"
+        Write-Host "Ожидание автоматической остановки системы..."
+        while($true) { Start-Sleep -Seconds 60 }
